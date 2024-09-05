@@ -3,6 +3,22 @@
 ## Overview:
 This project involves the development of an automated medicine dispenser using an ESP32 microcontroller that is controlled via a mobile application created using Kodular. The system ensures timely dispensing of medicine, which is particularly useful for elderly patients or people with strict medication schedules. The mobile app allows users to set the dispensing time, and the system uses Google Firebase for storing and retrieving the dispensing schedule in real-time. When it's time to dispense, a servo motor is triggered to release the medicine, and a buzzer sounds to alert the user.
 
+## Hardware Connection 
+
+-- ESP32 Pin Connections:
+-- Servo Motor:
+-Signal Pin (from Servo) → GPIO 13 (or servoPin)
+-  VCC Pin (from Servo) → 5V Pin on ESP32
+- GND Pin (from Servo) → GND Pin on ESP32
+-- Buzzer:
+- Positive Pin (from Buzzer) → GPIO 12 (or buzzerPin)
+- Negative Pin (from Buzzer) → GND Pin on ESP32
+-- RTC (DS1307 Module):
+- VCC Pin → 3.3V Pin on ESP32
+- GND Pin → GND Pin on ESP32
+- SDA Pin → GPIO 21 (I2C Data Line)
+- SCL Pin → GPIO 22 (I2C Clock Line)
+
 ## Key Features:
 - Automated Dispensing: The ESP32 controls the servo motor, which operates a mechanism to dispense medicine at the scheduled time.
 - Mobile Application (Kodular): The user-friendly mobile app built with Kodular allows users to set and modify the medicine dispensing time.
